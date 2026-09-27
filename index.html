@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>VÉRA — Boutique Hotel &amp; Retreat · Serra Catarinense</title>
+  <meta name="description" content="VÉRA é um hotel boutique e retiro na Serra Catarinense. Arquitetura, natureza e silêncio em uma experiência criada para desacelerar. Projeto fictício de portfólio.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#34361F">
+  <meta property="og:title" content="VÉRA — Where time slows down.">
+  <meta property="og:description" content="Arquitetura, natureza e silêncio em uma experiência criada para desacelerar.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1200&q=70">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2334361F'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23EDEAE2'%3EV%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Jost:wght@300..600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1600&q=70" imagesrcset="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=800&q=70 800w, https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1600&q=70 1600w, https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=2400&q=70 2400w" imagesizes="100vw">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" id="hdr">
+  <nav class="hdr__nav hdr__nav--l" aria-label="Principal">
+    <a href="#stay" data-nav>Stay</a>
+    <a href="#experience" data-nav>Experience</a>
+    <a href="#gastronomy" data-nav>Gastronomy</a>
+  </nav>
+  <a class="logo" href="#top" data-nav aria-label="VÉRA — início">VÉRA</a>
+  <div class="hdr__r">
+    <nav class="hdr__nav hdr__nav--r" aria-label="Secundária">
+      <a href="#wellness" data-nav>Wellness</a>
+      <a href="#gallery" data-nav>Gallery</a>
+      <a href="#journal" data-nav>Journal</a>
+    </nav>
+    <button class="btn btn--line hdr__book" type="button" data-book>Book your stay</button>
+    <button class="hdr__menu" type="button" aria-expanded="false" aria-controls="menu" id="menuBtn">
+      <span class="hdr__menu-label">Menu</span><span class="hdr__menu-icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ FULLSCREEN MENU ============ -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="menu__inner">
+    <nav class="menu__nav" aria-label="Menu">
+      <a href="#stay" data-nav><span>Stay</span><small>07:30</small></a>
+      <a href="#experience" data-nav><span>Experience</span><small>09:00</small></a>
+      <a href="#gastronomy" data-nav><span>Gastronomy</span><small>12:30</small></a>
+      <a href="#wellness" data-nav><span>Wellness</span><small>15:30</small></a>
+      <a href="#gallery" data-nav><span>Gallery</span><small>19:00</small></a>
+      <a href="#journal" data-nav><span>Journal</span><small>20:00</small></a>
+    </nav>
+    <div class="menu__foot">
+      <button class="btn btn--solid" type="button" data-book>Book your stay</button>
+      <p>Vale do Silêncio · Serra Catarinense<br>reservas@stayvera.com.br</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DAY CLOCK (signature) ============ -->
+<!-- persistent booking + relógio do dia -->
+<div class="dock" id="dock">
+  <div class="dayclock" id="dayclock" aria-hidden="true" title="A página como um dia no VÉRA">
+    <span class="dayclock__time" id="dayclockTime">05:50</span>
+    <span class="dayclock__label" id="dayclockLabel">Neblina no vale</span>
+    <span class="dayclock__track"><i id="dayclockDot"></i></span>
+  </div>
+  <button class="fab-book" type="button" data-book id="fabBook">Book your stay</button>
+</div>
+<div class="mbar" id="mbar">
+  <p>A partir de<br><strong>R$ 1.290</strong> / noite</p>
+  <button class="btn btn--solid" type="button" data-book>Book your stay</button>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" data-dark data-time="05:50" data-moment="Neblina no vale">
+  <div class="hero__media" aria-hidden="true">
+    <img class="hero__slide is-active" src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1600&q=70" srcset="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=800&q=70 800w, https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1600&q=70 1600w, https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=2400&q=70 2400w" sizes="100vw" alt="" fetchpriority="high">
+    <img class="hero__slide" data-src="1745894118353-88e64617e064" alt="">
+    <img class="hero__slide" data-src="1600585154340-be6161a56a0c" alt="">
+  </div>
+  <div class="hero__shade" aria-hidden="true"></div>
+
+  <div class="hero__top">
+    <p class="hero__brand"><span>VÉRA</span> Boutique Hotel &amp; Retreat</p>
+    <p class="hero__coords">28°04′S · 49°31′W · 1.280 m</p>
+  </div>
+
+  <div class="hero__body">
+    <h1 class="hero__title" data-split>
+      <span class="ln"><span>Some places</span></span>
+      <span class="ln"><span>are meant to be <em>felt.</em></span></span>
+    </h1>
+    <p class="hero__sub">Arquitetura, natureza e silêncio em uma experiência criada para desacelerar.</p>
+    <div class="hero__cta">
+      <a class="btn btn--light" href="#intro" data-nav>Discover VÉRA</a>
+      <button class="btn btn--glass" type="button" data-book>Book your stay</button>
+    </div>
+  </div>
+
+  <div class="hero__foot">
+    <a class="hero__scroll" href="#intro" data-nav>Scroll to explore <i aria-hidden="true"></i></a>
+    <ol class="hero__caps" aria-hidden="true">
+      <li class="is-active">O vale ao amanhecer</li>
+      <li>Sauna com vista para a mata</li>
+      <li>Private Villa ao entardecer</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="intro" id="intro" data-time="06:20" data-moment="Primeira luz">
+  <div class="wrap intro__grid">
+    <p class="eyebrow" data-reveal>The VÉRA experience</p>
+    <h2 class="display intro__title" data-split>
+      <span class="ln"><span>Not simply</span></span>
+      <span class="ln"><span>a place <em>to stay.</em></span></span>
+    </h2>
+    <div class="intro__text" data-reveal>
+      <p class="lede">VÉRA nasceu da vontade de criar um lugar onde arquitetura, natureza e hospitalidade existissem em equilíbrio.</p>
+      <p>São catorze suítes espalhadas por quarenta hectares de mata de araucária, na Serra Catarinense. Não há televisão nos quartos, nem hora para terminar o café, nem horário para voltar da trilha. Há lareira, lençóis de linho e uma janela grande o bastante para você esquecer de olhar o celular.</p>
+      <a class="link" href="#architecture" data-nav>Conheça a arquitetura</a>
+    </div>
+  </div>
+  <figure class="intro__figure mask" data-mask>
+    <div class="parallax" data-parallax="0.12">
+      <img data-u="1762544968153-b9b47435fefd" data-sizes="100vw" alt="Sala de leitura com poltronas de couro, lareira e janelas altas voltadas para a mata">
+    </div>
+    <figcaption>Sala de leitura, pavilhão central</figcaption>
+  </figure>
+</section>
+
+<!-- ============ STAY ============ -->
+<section class="stay" id="stay" data-time="07:30" data-moment="Despertar sem pressa">
+  <div class="wrap">
+    <header class="sec-head sec-head--split">
+      <div>
+        <p class="eyebrow" data-reveal>Stay</p>
+        <h2 class="display" data-split>
+          <span class="ln"><span>Spaces designed</span></span>
+          <span class="ln"><span>for <em>stillness.</em></span></span>
+        </h2>
+      </div>
+      <p class="sec-head__text" data-reveal>Três maneiras de ficar. Todas com enxoval de linho, amenities feitos com ervas da nossa horta e janelas que enquadram a mata.</p>
+    </header>
+  </div>
+
+  <div class="suites" id="suites">
+    <article class="suite" data-room="forest">
+      <a class="suite__media mask" data-mask href="#" data-book-room="forest" data-cursor="Book" aria-label="Reservar Forest Suite">
+        <img data-u="1615880484746-a134be9a6ecf" data-sizes="(min-width: 960px) 58vw, 88vw" alt="Varanda de madeira com cadeiras voltada para a mata ao amanhecer">
+      </a>
+      <div class="suite__body">
+        <p class="suite__kicker">Suíte 01 · 8 unidades</p>
+        <h3 class="suite__name">Forest Suite</h3>
+        <p class="suite__desc">Suspensa entre as copas, com a varanda voltada para o leste. O sol entra pelo pé da cama antes das sete.</p>
+        <dl class="specs">
+          <div><dt>Área</dt><dd>45 m²</dd></div>
+          <div><dt>Cama</dt><dd>King bed</dd></div>
+          <div><dt>Hóspedes</dt><dd>2</dd></div>
+          <div><dt>Vista</dt><dd>Floresta</dd></div>
+        </dl>
+        <ul class="amen"><li>Banheira</li><li>Varanda privativa</li></ul>
+        <div class="suite__foot">
+          <p class="price"><small>A partir de</small> R$ 1.290 <small>/ noite</small></p>
+          <button class="btn btn--solid" type="button" data-book-room="forest">Book this suite</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="suite suite--flip" data-room="vera">
+      <a class="suite__media mask" data-mask href="#" data-book-room="vera" data-cursor="Book" aria-label="Reservar VÉRA Suite">
+        <img data-u="1596394516093-501ba68a0ba6" data-sizes="(min-width: 960px) 58vw, 88vw" alt="Cama em terraço de madeira com vista panorâmica para o vale e as montanhas">
+      </a>
+      <div class="suite__body">
+        <p class="suite__kicker">Suíte 02 · 4 unidades</p>
+        <h3 class="suite__name">VÉRA Suite</h3>
+        <p class="suite__desc">No ponto mais alto do terreno. Lareira de pedra, terraço aberto para o vale e uma banheira de onde se vê a geada chegar.</p>
+        <dl class="specs">
+          <div><dt>Área</dt><dd>68 m²</dd></div>
+          <div><dt>Cama</dt><dd>King bed</dd></div>
+          <div><dt>Hóspedes</dt><dd>2</dd></div>
+          <div><dt>Vista</dt><dd>Panorâmica</dd></div>
+        </dl>
+        <ul class="amen"><li>Lareira</li><li>Banheira</li><li>Terraço privativo</li></ul>
+        <div class="suite__foot">
+          <p class="price"><small>A partir de</small> R$ 1.890 <small>/ noite</small></p>
+          <button class="btn btn--solid" type="button" data-book-room="vera">Book this suite</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="suite" data-room="villa">
+      <a class="suite__media mask" data-mask href="#" data-book-room="villa" data-cursor="Book" aria-label="Reservar Private Villa">
+        <img data-u="1600585154340-be6161a56a0c" data-sizes="(min-width: 960px) 58vw, 88vw" alt="Villa contemporânea iluminada ao entardecer, sob uma árvore antiga">
+      </a>
+      <div class="suite__body">
+        <p class="suite__kicker">Suíte 03 · 2 unidades</p>
+        <h3 class="suite__name">Private Villa</h3>
+        <p class="suite__desc">Uma casa inteira para dois, afastada do pavilhão central. Piscina aquecida, deck sobre o vale e café servido quando você pedir.</p>
+        <dl class="specs">
+          <div><dt>Área</dt><dd>110 m²</dd></div>
+          <div><dt>Cama</dt><dd>King bed</dd></div>
+          <div><dt>Hóspedes</dt><dd>2</dd></div>
+          <div><dt>Vista</dt><dd>Vale</dd></div>
+        </dl>
+        <ul class="amen"><li>Piscina privativa</li><li>Lareira</li><li>Deck panorâmico</li></ul>
+        <div class="suite__foot">
+          <p class="price"><small>A partir de</small> R$ 2.790 <small>/ noite</small></p>
+          <button class="btn btn--solid" type="button" data-book-room="villa">Book this suite</button>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="exp" id="experience" data-time="09:00" data-moment="Manhã na trilha">
+  <div class="wrap">
+    <header class="sec-head sec-head--split">
+      <div>
+        <p class="eyebrow" data-reveal>Experience</p>
+        <h2 class="display" data-split><span class="ln"><span>More than</span></span><span class="ln"><span><em>a stay.</em></span></span></h2>
+      </div>
+      <p class="sec-head__text" data-reveal>Um dia no VÉRA, do café ao céu estrelado. Tudo é opcional, inclusive fazer nada.</p>
+    </header>
+  </div>
+  <div class="exp__track" data-drag>
+    <article class="xcard" data-reveal>
+      <div class="xcard__img mask" data-mask><img data-u="1495474472287-4d71bcdd2085" data-sizes="(min-width: 960px) 30vw, 78vw" alt="Mãos segurando xícaras de café sobre mesa de madeira"></div>
+      <p class="xcard__time">06:10</p>
+      <h3>Sunrise Breakfast</h3>
+      <p>Café servido no deck enquanto a neblina deixa o vale. Pão de fermentação natural, queijos da serra e frutas da estação.</p>
+    </article>
+    <article class="xcard" data-reveal>
+      <div class="xcard__img mask" data-mask><img data-u="1447752875215-b2761acb3c5d" data-sizes="(min-width: 960px) 30vw, 78vw" alt="Passarela de madeira atravessando uma floresta densa"></div>
+      <p class="xcard__time">08:30</p>
+      <h3>Forest Trails</h3>
+      <p>Seis quilômetros de trilhas sinalizadas entre araucárias e nascentes. Saída guiada ou no seu tempo, com mapa e cantil.</p>
+    </article>
+    <article class="xcard" data-reveal>
+      <div class="xcard__img mask" data-mask><img data-u="1506377247377-2a5b3b417ebb" data-sizes="(min-width: 960px) 30vw, 78vw" alt="Taça de vinho tinto sobre mureta com vinhedos ao fundo"></div>
+      <p class="xcard__time">17:00</p>
+      <h3>Wine Experience</h3>
+      <p>Degustação guiada de vinhos de altitude das vinícolas vizinhas, na adega escavada na encosta.</p>
+    </article>
+    <article class="xcard" data-reveal>
+      <div class="xcard__img mask" data-mask><img data-u="1414235077428-338989a2e8c0" data-sizes="(min-width: 960px) 30vw, 78vw" alt="Mesa de jantar posta à luz baixa com taças e pratos"></div>
+      <p class="xcard__time">20:00</p>
+      <h3>Private Dinner</h3>
+      <p>Sete tempos servidos no seu terraço, à luz de velas, pela cozinha do TERRA. Só vocês dois e o barulho da mata.</p>
+    </article>
+    <article class="xcard" data-reveal>
+      <div class="xcard__img mask" data-mask><img data-u="1761319914911-71b059a655d8" data-sizes="(min-width: 960px) 30vw, 78vw" alt="Estar com lareira a lenha acesa entre janelas voltadas para a mata"></div>
+      <p class="xcard__time">21:30</p>
+      <h3>Fireplace Sessions</h3>
+      <p>Lareira acesa, chá de ervas, discos em vinil e uma biblioteca de arquitetura e natureza para folhear sem compromisso.</p>
+    </article>
+    <article class="xcard" data-reveal>
+      <div class="xcard__img mask" data-mask><img data-u="1444703686981-a3abbc4d4fe3" data-sizes="(min-width: 960px) 30vw, 78vw" alt="Pessoa observando a Via Láctea em céu escuro"></div>
+      <p class="xcard__time">23:00</p>
+      <h3>Stargazing</h3>
+      <p>Céu de altitude, sem luz urbana por perto. Telescópio, mantas e um guia para apresentar as constelações do sul.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ GASTRONOMY ============ -->
+<section class="gastro" id="gastronomy" data-dark data-time="12:30" data-moment="Almoço no TERRA">
+  <div class="wrap gastro__grid">
+    <div class="gastro__intro">
+      <p class="eyebrow eyebrow--light" data-reveal>Gastronomy</p>
+      <h2 class="display" data-split>
+        <span class="ln"><span>Local ingredients.</span></span>
+        <span class="ln"><span><em>Unexpected</em></span></span>
+        <span class="ln"><span><em>experiences.</em></span></span>
+      </h2>
+    </div>
+    <figure class="gastro__dish mask" data-mask>
+      <div class="parallax" data-parallax="0.1">
+        <img data-u="1467003909585-2f8a72700288" data-sizes="(min-width: 960px) 44vw, 100vw" alt="Prato autoral com peixe grelhado, ervas e molho claro">
+      </div>
+      <figcaption>Truta de água fria, manteiga de pinhão e folhas da horta</figcaption>
+    </figure>
+    <div class="gastro__terra">
+      <p class="terra-mark" data-reveal>TERRA</p>
+      <p class="lede" data-reveal>Um restaurante guiado pelos ingredientes, pelas estações e pelo território.</p>
+      <p data-reveal>O cardápio muda toda semana, conforme o que a horta, os produtores da serra e a mata oferecem: pinhão no inverno, cogumelos depois da chuva, truta de água fria o ano inteiro. Cozinha da chef Tereza Vidal.</p>
+      <ul class="offer" data-reveal>
+        <li><h3>Breakfast</h3><p>À mesa ou no quarto, sem hora para acabar.</p><span>07h – 11h</span></li>
+        <li><h3>Dinner</h3><p>Menu degustação de sete tempos ou à la carte.</p><span>19h30 – 22h30</span></li>
+        <li><h3>Wine Cellar</h3><p>Mais de 300 rótulos, com foco em vinhos de altitude catarinenses.</p><span>Sob reserva</span></li>
+        <li><h3>Private Dining</h3><p>Mesa para dois na adega, no deck ou no seu terraço.</p><span>Sob reserva</span></li>
+      </ul>
+    </div>
+    <figure class="gastro__room mask" data-mask>
+      <img data-u="1517248135467-4c7edcad34c4" data-sizes="(min-width: 960px) 30vw, 100vw" alt="Salão do restaurante com luz baixa, mesas de madeira e luminárias pendentes">
+    </figure>
+  </div>
+</section>
+
+<!-- ============ WELLNESS ============ -->
+<section class="well" id="wellness" data-time="15:30" data-moment="Sauna e silêncio">
+  <div class="wrap well__grid">
+    <div class="well__text">
+      <p class="eyebrow" data-reveal>Wellness</p>
+      <h2 class="display" data-split><span class="ln"><span>Return to</span></span><span class="ln"><span>your <em>rhythm.</em></span></span></h2>
+      <p class="sec-head__text" data-reveal>Um spa de pedra e madeira aberto para a mata. Tratamentos sem pressa, pensados para o corpo desacelerar antes da mente.</p>
+      <ul class="well__list" id="wellList">
+        <li><button type="button" class="is-active" data-img="0"><span class="well__name">Massagem</span><span class="well__meta">60 ou 90 min</span><span class="well__desc">Óleos prensados a frio com ervas da horta. Pressão ajustada a você, não ao relógio.</span></button></li>
+        <li><button type="button" data-img="1"><span class="well__name">Sauna</span><span class="well__meta">16h – 22h</span><span class="well__desc">Sauna finlandesa a lenha, com janela para a mata e ducha fria ao ar livre.</span></button></li>
+        <li><button type="button" data-img="2"><span class="well__name">Hot Tub</span><span class="well__meta">38 °C</span><span class="well__desc">Ofurô externo aquecido, ao ar livre, mesmo nas noites de geada.</span></button></li>
+        <li><button type="button" data-img="3"><span class="well__name">Yoga</span><span class="well__meta">Diariamente, 7h30</span><span class="well__desc">Aulas no deck coberto, para todos os níveis. Tapetes e mantas no local.</span></button></li>
+        <li><button type="button" data-img="4"><span class="well__name">Meditation</span><span class="well__meta">20 min, ao entardecer</span><span class="well__desc">Práticas guiadas curtas, sentados de frente para o vale.</span></button></li>
+        <li><button type="button" data-img="5"><span class="well__name">Nature Therapy</span><span class="well__meta">2 h</span><span class="well__desc">Caminhada lenta e sensorial pela mata, conduzida por guia de banho de floresta.</span></button></li>
+      </ul>
+    </div>
+    <div class="well__stage mask" data-mask aria-hidden="true">
+      <img class="is-active" data-u="1591343395082-e120087004b4" data-sizes="(min-width: 960px) 46vw, 100vw" alt="">
+      <img data-u="1712659606957-b7395ba9ebb2" data-sizes="(min-width: 960px) 46vw, 100vw" alt="">
+      <img data-u="1615011950300-ffd3dcfc509f" data-sizes="(min-width: 960px) 46vw, 100vw" alt="">
+      <img data-u="1545389336-cf090694435e" data-sizes="(min-width: 960px) 46vw, 100vw" alt="">
+      <img data-u="1506126613408-eca07ce68773" data-sizes="(min-width: 960px) 46vw, 100vw" alt="">
+      <img data-u="1508672019048-805c876b67e2" data-sizes="(min-width: 960px) 46vw, 100vw" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARCHITECTURE ============ -->
+<section class="arch" id="architecture" data-time="17:10" data-moment="Luz rasante">
+  <div class="wrap">
+    <header class="arch__head">
+      <p class="eyebrow" data-reveal>Architecture</p>
+      <h2 class="display" data-split>
+        <span class="ln"><span>Designed around</span></span>
+        <span class="ln"><span>the <em>landscape.</em></span></span>
+      </h2>
+      <div class="arch__text" data-reveal>
+        <p class="lede">Nenhuma araucária foi derrubada para erguer o VÉRA.</p>
+        <p>Os volumes se acomodam entre as árvores que já estavam aqui, com beirais longos que controlam o sol e panos de vidro voltados para o vale. Materiais crus, que envelhecem bem, e uma paleta que muda com a luz do dia.</p>
+        <p class="arch__credit">Projeto arquitetônico: Estúdio Campo Alto</p>
+      </div>
+    </header>
+
+    <div class="mats">
+      <figure class="mat mat--a" data-reveal>
+        <div class="mask" data-mask><div class="parallax" data-parallax="0.08"><img data-u="1600585153490-76fb20a32601" data-sizes="(min-width: 960px) 56vw, 100vw" alt="Volume escuro com janelas verticais iluminadas entre árvores"></div></div>
+        <figcaption><span>Concreto</span>Aparente, moldado em fôrmas de tábua. Guarda o calor do dia e devolve à noite.</figcaption>
+      </figure>
+      <figure class="mat mat--b" data-reveal>
+        <div class="mask" data-mask><img data-u="1770625468096-ff53cd24ee38" data-sizes="(min-width: 960px) 30vw, 100vw" alt="Detalhe de madeira curvada e texturizada na sauna"></div>
+        <figcaption><span>Madeira</span>Freijó e pinus de reflorestamento certificados nos forros, decks e marcenaria.</figcaption>
+      </figure>
+      <figure class="mat mat--c" data-reveal>
+        <div class="mask" data-mask><img data-u="1761932365108-013d069a71d0" data-sizes="(min-width: 960px) 24vw, 100vw" alt="Muro de pedra irregular"></div>
+        <figcaption><span>Pedra</span>Basalto extraído na própria obra, nos muros de arrimo e nos banheiros.</figcaption>
+      </figure>
+      <figure class="mat mat--d" data-reveal>
+        <div class="mask" data-mask><img data-u="1600566753376-12c8ab7fb75b" data-sizes="(min-width: 960px) 34vw, 100vw" alt="Fachada de vidro com escada de madeira iluminada na hora azul"></div>
+        <figcaption><span>Vidro</span>Esquadrias do piso ao teto com vidro duplo, para ver a geada sem sentir o frio.</figcaption>
+      </figure>
+      <figure class="mat mat--e" data-reveal>
+        <div class="mask" data-mask><img data-u="1513836279014-a89f7a76ae86" data-sizes="(min-width: 960px) 26vw, 100vw" alt="Copas de árvores vistas de baixo"></div>
+        <figcaption><span>Vegetação</span>Telhados verdes com espécies nativas e um jardim que se confunde com a mata.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISUAL / HORIZONTAL ============ -->
+<section class="reel" id="reel" data-dark data-time="18:20" data-moment="Entardecer" aria-label="Um dia no VÉRA">
+  <div class="reel__pin">
+    <div class="reel__track" id="reelTrack">
+      <div class="reel__intro">
+        <p class="eyebrow eyebrow--light">A day at VÉRA</p>
+        <p class="reel__hint">Role para atravessar o dia <i aria-hidden="true">→</i></p>
+      </div>
+      <figure class="reel__img reel__img--tall"><img data-u="1698241025739-e1ab506b0f5e" data-sizes="(min-width: 960px) 40vw, 80vw" alt="Luz da manhã atravessando a cortina sobre a cama"></figure>
+      <p class="reel__phrase">Wake<br><em>slowly.</em></p>
+      <figure class="reel__img reel__img--wide"><img data-u="1482049016688-2d3e1b311543" data-sizes="(min-width: 960px) 52vw, 86vw" alt="Prato de café da manhã com ovos e folhas"></figure>
+      <p class="reel__phrase">Eat<br><em>consciously.</em></p>
+      <figure class="reel__img reel__img--tall"><img data-u="1425913397330-cf8af2ff40a1" data-sizes="(min-width: 960px) 40vw, 80vw" alt="Floresta com feixes de luz entre os troncos"></figure>
+      <p class="reel__phrase">Walk without<br><em>destination.</em></p>
+      <figure class="reel__img reel__img--wide"><img data-u="1470071459604-3b5ec3a7fe05" data-sizes="(min-width: 960px) 52vw, 86vw" alt="Vale com montanhas e neblina ao pôr do sol"></figure>
+      <figure class="reel__img reel__img--tall"><img data-u="1531353826977-0941b4779a1c" data-sizes="(min-width: 960px) 40vw, 80vw" alt="Pessoa dormindo sobre travesseiro de linho"></figure>
+      <p class="reel__phrase">Sleep<br><em>deeply.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery" id="gallery" data-time="19:00" data-moment="Hora azul">
+  <div class="wrap">
+    <header class="sec-head sec-head--split">
+      <div>
+        <p class="eyebrow" data-reveal>Gallery</p>
+        <h2 class="display" data-split><span class="ln"><span>Seen at <em>VÉRA.</em></span></span></h2>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar galeria" id="filters">
+        <button type="button" class="is-active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="architecture" aria-pressed="false">Architecture</button>
+        <button type="button" data-filter="rooms" aria-pressed="false">Rooms</button>
+        <button type="button" data-filter="nature" aria-pressed="false">Nature</button>
+        <button type="button" data-filter="gastronomy" aria-pressed="false">Gastronomy</button>
+        <button type="button" data-filter="wellness" aria-pressed="false">Wellness</button>
+      </div>
+    </header>
+    <div class="masonry" id="masonry">
+      <!-- items rendered from GALLERY data in app.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNAL ============ -->
+<section class="journal" id="journal" data-time="20:00" data-moment="Leitura junto à lareira">
+  <div class="wrap">
+    <header class="sec-head sec-head--split">
+      <div>
+        <p class="eyebrow" data-reveal>Journal</p>
+        <h2 class="display" data-split><span class="ln"><span>Notes on <em>slowness.</em></span></span></h2>
+      </div>
+      <p class="sec-head__text" data-reveal>Ensaios, bastidores e estações. Escrito por quem vive e trabalha no vale.</p>
+    </header>
+    <div class="jgrid" id="jgrid">
+      <!-- rendered from JOURNAL data in app.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="loc" id="location" data-dark data-time="21:00" data-moment="Estrada de volta">
+  <div class="wrap loc__grid">
+    <div class="loc__text">
+      <p class="eyebrow eyebrow--light" data-reveal>Location</p>
+      <h2 class="display" data-split>
+        <span class="ln"><span>Far enough</span></span>
+        <span class="ln"><span>to <em>disconnect.</em></span></span>
+        <span class="ln"><span>Close enough</span></span>
+        <span class="ln"><span>to <em>return.</em></span></span>
+      </h2>
+      <p data-reveal>O VÉRA fica no Vale do Silêncio, na Serra Catarinense, a 1.280 metros de altitude. Os últimos quatro quilômetros são de estrada de terra batida, e o sinal de celular chega forte apenas no pavilhão central. De propósito.</p>
+      <ul class="times" data-reveal>
+        <li><strong>2h30</strong><span>de Florianópolis</span></li>
+        <li><strong>1h40</strong><span>do aeroporto mais próximo</span></li>
+        <li><strong>20 min</strong><span>do centro da cidade</span></li>
+      </ul>
+      <p class="loc__note" data-reveal>Transfer privativo do aeroporto disponível como extra na reserva.</p>
+    </div>
+    <figure class="loc__map" data-reveal>
+      <svg id="topo" viewBox="0 0 800 640" role="img" aria-labelledby="topoTitle">
+        <title id="topoTitle">Mapa topográfico ilustrado do Vale do Silêncio com as rotas para Florianópolis, o aeroporto e o centro da cidade</title>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="quotes" data-time="21:40" data-moment="Conversa baixa">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Guests</p>
+    <div class="quotes__list">
+      <figure class="quote" data-reveal>
+        <blockquote>“We arrived for the architecture. <em>We returned for the feeling.</em>”</blockquote>
+        <figcaption>— Mariana &amp; Lucas <span>VÉRA Suite · julho</span></figcaption>
+      </figure>
+      <figure class="quote" data-reveal>
+        <blockquote>“One of those places you wish <em>nobody else knew about.</em>”</blockquote>
+        <figcaption>— André M. <span>Forest Suite · maio</span></figcaption>
+      </figure>
+      <figure class="quote" data-reveal>
+        <blockquote>“Came for two nights. <em>Stayed for five.</em>”</blockquote>
+        <figcaption>— Helena &amp; Rafael <span>Private Villa · agosto</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq" data-time="22:10" data-moment="Chá antes de dormir">
+  <div class="wrap faq__grid">
+    <div>
+      <p class="eyebrow" data-reveal>FAQ</p>
+      <h2 class="h2" data-reveal>Before you arrive.</h2>
+      <p class="muted" data-reveal>Outras dúvidas? Escreva para <a class="link" href="mailto:reservas@stayvera.com.br">reservas@stayvera.com.br</a>.</p>
+    </div>
+    <div class="faq__list">
+      <details data-reveal><summary>Quais são os horários de check-in e check-out?</summary><p>Check-in a partir das 15h e check-out até as 12h. Se o seu voo for tarde, guardamos a bagagem e a sauna fica à sua disposição até a saída.</p></details>
+      <details data-reveal><summary>O VÉRA recebe crianças?</summary><p>O VÉRA é um refúgio para adultos. Recebemos hóspedes a partir de 14 anos.</p></details>
+      <details data-reveal><summary>Qual é a política de cancelamento?</summary><p>Cancelamento gratuito até 7 dias antes do check-in. Depois disso, cobramos o valor da primeira noite.</p></details>
+      <details data-reveal><summary>Posso levar meu animal de estimação?</summary><p>Não recebemos animais, com exceção de cães-guia. A mata ao redor é área de preservação e abriga fauna silvestre.</p></details>
+      <details data-reveal><summary>Como é o acesso de carro?</summary><p>A estrada é asfaltada até a cidade. Os últimos 4 km são de terra batida, transitáveis por qualquer carro. Em dias de chuva forte, oferecemos o transfer a partir da cidade sem custo.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section class="insta" data-time="22:30" data-moment="Luzes baixas">
+  <div class="wrap insta__head">
+    <h2 class="insta__handle" data-reveal><a href="#" aria-label="@stayvera no Instagram (link de exemplo)">@stayvera</a></h2>
+    <p class="insta__text" data-reveal>Follow the quiet.</p>
+  </div>
+  <div class="insta__grid" id="instaGrid"></div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot" id="footer" data-dark data-time="23:40" data-moment="Céu estrelado">
+  <canvas class="foot__stars" id="stars" aria-hidden="true"></canvas>
+  <div class="wrap foot__inner">
+    <div class="foot__cta">
+      <p class="foot__tag">Where time slows down.<br><em>Onde o tempo desacelera.</em></p>
+      <button class="btn btn--light" type="button" data-book>Book your stay</button>
+    </div>
+    <nav class="foot__cols" aria-label="Rodapé">
+      <div><h3>Stay</h3><a href="#stay" data-nav>Rooms</a><a href="#stay" data-nav>Villas</a><a href="#experience" data-nav>Packages</a></div>
+      <div><h3>Experience</h3><a href="#gastronomy" data-nav>Gastronomy</a><a href="#wellness" data-nav>Wellness</a><a href="#experience" data-nav>Activities</a></div>
+      <div><h3>About</h3><a href="#intro" data-nav>Our Story</a><a href="#architecture" data-nav>Architecture</a><a href="#journal" data-nav>Journal</a><a href="mailto:reservas@stayvera.com.br">Contact</a></div>
+      <div><h3>Reservations</h3><button type="button" data-book>Book</button><button type="button" data-manage>Manage Booking</button><a href="#faq" data-nav>FAQ</a></div>
+    </nav>
+    <p class="foot__logo" aria-hidden="true">VÉRA</p>
+    <div class="foot__legal">
+      <p>Vale do Silêncio · Serra Catarinense · SC · +55 (49) 3000-0000</p>
+      <p>Projeto fictício de portfólio. Fotografias: Unsplash. Nenhuma reserva ou pagamento real é processado.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BOOKING ============ -->
+<div class="bk" id="booking" role="dialog" aria-modal="true" aria-labelledby="bkTitle" hidden>
+  <div class="bk__veil" data-bk-close></div>
+  <div class="bk__panel">
+    <header class="bk__top">
+      <p class="bk__logo">VÉRA <span>Reservations</span></p>
+      <ol class="bk__steps" id="bkSteps" aria-label="Etapas da reserva">
+        <li data-step="1"><span>01</span> Stay</li>
+        <li data-step="2"><span>02</span> Guest Details</li>
+        <li data-step="3"><span>03</span> Extras</li>
+        <li data-step="4"><span>04</span> Payment</li>
+        <li data-step="5"><span>05</span> Confirmation</li>
+      </ol>
+      <button class="bk__close" type="button" data-bk-close aria-label="Fechar reservas"><i></i><i></i></button>
+    </header>
+    <div class="bk__body" id="bkBody" tabindex="-1">
+      <!-- views rendered by app.js -->
+    </div>
+  </div>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria em tela cheia" hidden>
+  <button class="lb__close" type="button" aria-label="Fechar galeria"><i></i><i></i></button>
+  <button class="lb__nav lb__nav--prev" type="button" aria-label="Foto anterior">←</button>
+  <figure class="lb__fig">
+    <img id="lbImg" alt="">
+    <figcaption><span id="lbCap"></span><span id="lbCount"></span></figcaption>
+  </figure>
+  <button class="lb__nav lb__nav--next" type="button" aria-label="Próxima foto">→</button>
+</div>
+
+<!-- ============ ARTICLE ============ -->
+<div class="art" id="article" role="dialog" aria-modal="true" aria-labelledby="artTitle" hidden>
+  <div class="art__scroll" id="artScroll"></div>
+</div>
+
+<!-- page transition veil + cursor -->
+<div class="veil" id="veil" aria-hidden="true"><span>VÉRA</span></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
